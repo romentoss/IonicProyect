@@ -1,0 +1,83 @@
+<app-header title="date time"></app-header>
+
+<ion-content>
+
+
+
+  <ion-list>
+
+    <ion-item id="date">
+      <ion-label>Fecha de nacimiento</ion-label>
+      <ion-input
+          value="{{ fechaSelec | date: 'dd.MM.yyyy' }}"
+          class="ion-text-end">
+      </ion-input>
+      <ion-popover trigger="date" size="cover">
+          <ng-template>
+              <ion-datetime [value]="fechaNaci.toISOString()"
+                  display-format="DD MM YYYY"
+                  [preferWheel]="true"
+                  (ionChange)="cambioFecha($event)">
+              </ion-datetime>
+          </ng-template>
+      </ion-popover>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>Restricciones</ion-label>
+  </ion-list-header>
+
+  <ion-item id="date1">
+    <ion-label>Min y Max</ion-label>
+    <ion-input
+    value="{{ fechaSelec | date: 'dd.MM.yyyy' }}"
+    class="ion-text-end">
+    </ion-input>
+    <ion-popover trigger="date1" size="cover">
+      <ng-template>
+          <ion-datetime
+              display-format="DD MMMM YYYY"
+              [preferWheel]="true"
+              min="2015-01-01"
+              max="2025-12-31"
+              >
+          </ion-datetime>
+      </ng-template>
+  </ion-popover>
+  </ion-item>
+
+  <ion-item id="date2">
+    <ion-label>Años</ion-label>
+    <ion-input
+    value="{{ fechaSelec | date: 'dd.MM.yyyy' }}"
+    class="ion-text-end">
+    </ion-input>
+    <ion-popover trigger="date2" size="cover">
+      <ng-template>
+          <ion-datetime
+              display-format="YYYY"
+              [preferWheel]="true"
+              min="2015"
+              max="2025"
+              >
+          </ion-datetime>
+      </ng-template>
+  </ion-popover>
+  </ion-item>
+
+  <ion-item id="date3">
+    <ion-label>Custom Options</ion-label>
+    <ion-input
+    value="{{ fechaSelec | date: 'dd.MM.yyyy' }}"
+    class="ion-text-end">
+    </ion-input>
+    <ion-popover trigger="date3" size="cover">
+      <ng-template>
+          <ion-datetime [yearValues]="customYearValues">
+          </ion-datetime>
+      </ng-template>
+  </ion-popover>
+  </ion-item>
+
+    </ion-list>
+</ion-content>
