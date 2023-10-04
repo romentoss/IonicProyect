@@ -70,6 +70,11 @@ export class HomePage implements OnInit {
       name:'Input',
       redirectTo:'/input'
     },
+    {
+      icon:'list-outline',
+      name:'List - Sliding',
+      redirectTo:'/list'
+    },
   ];
   constructor() { }
 
