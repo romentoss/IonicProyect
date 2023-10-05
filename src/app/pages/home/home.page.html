@@ -1,12 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="showMenu()" color="primary">
+        <ion-icon name="menu-outline" slot="iocn-only"></ion-icon>
+        Click me
+      </ion-button>
+    </ion-buttons>
     <ion-title>Components</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
     <ion-list>
-      <ion-item *ngFor="let c of components"
+      <ion-item *ngFor="let c of components | async"
                 [routerLink]="c.redirectTo"
                 detail="true">
         <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
