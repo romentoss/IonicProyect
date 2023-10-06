@@ -8,6 +8,8 @@ import { Components } from '../interfaces/interfaces';
 })
 export class DataService {
 
+  dataModal!:any;
+
   constructor(private http: HttpClient) { }
 
   getUser(){
@@ -17,5 +19,7 @@ export class DataService {
   getMenuOpts(){
     return this.http.get<Components[]>('/assets/data/menu-opts.json');
   }
+
+
 
 }
