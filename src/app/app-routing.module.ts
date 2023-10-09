@@ -94,7 +94,7 @@ const routes: Routes = [
   {
     path: 'segment',
     loadChildren: () => import('./pages/segment/segment.module').then( m => m.SegmentPageModule)
-  },
+  }
 ];
 
 @NgModule({
