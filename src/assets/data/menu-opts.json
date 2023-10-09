@@ -85,7 +85,7 @@
     "redirectTo":"/progress"
   },
   {
-    "icon":"code-working-outline",
+    "icon":"arrow-down-circle-outline",
     "name":"Refresher",
     "redirectTo":"/refresher"
   }
